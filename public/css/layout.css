@@ -64,8 +64,10 @@ header .banner-text h1 {
 header .banner-text h3 {
    font: 18px/1.9em 'librebaskerville-regular', serif;
    color: #ddd;
-   margin: 0 auto;
+   margin: 30px auto;
    width: 70%;
+   text-align: center;
+   
 }
 header .banner-text h3 span,
 header .banner-text h3 a {
@@ -141,6 +143,7 @@ header .scrolldown a:hover { color: #0762f9; }
 #nav-wrap > a.mobile-btn { display: none; }
 
 ul#nav {
+   margin-top: 20px;
    min-height: 48px;
    width: auto;
 
@@ -165,6 +168,7 @@ ul#nav li a {
 	text-decoration: none;
    text-align: left;
    color: #fff;
+   font-size: 18px;
 
 	-webkit-transition: color .2s ease-in-out;
 	-moz-transition: color .2s ease-in-out;
@@ -199,6 +203,7 @@ ul#nav li.current a { color: #fe6928; }
 #about p {
    line-height: 30px;
    color: #ccc;
+   text-align: justify;
 }
 #about .profile-pic {
    position: relative;

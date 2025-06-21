@@ -1,19 +1,19 @@
 {
     "main": {
         "name" : "Arvi Rizqi Fadhila",
-        "description": "I am a junior frontend developer",
+        "description": "Hi, I am a university student with a strong interest in web development, particularly frontend development, as well as machine learning. I enjoy building interactive and responsive user interfaces while also exploring how data and algorithms can be leveraged to create intelligent solutions.",
         "image":"profilepic.jpg",
         "github":"https://github.com/ArviRizqi",
         "project":"https://github.com/ArviRizqi",
-        "bio": "Ini adalah section biografi aku",
+        "bio": "I’m a computer science student with a strong passion for web development, especially frontend engineering, and a growing interest in machine learning. I love crafting clean, responsive user interfaces and exploring how smart systems can be built using data and algorithms. I’m always eager to learn new tools, improve my technical skills, and stay current with the latest tech trends.",
         "contactmessage":"Hello, here I am",
-        "email": "myemail@gmail.com",
+        "email": "arvi.rizqi123@gmail.com",
         "phone": "877-1234-5678",
         "address":{
-            "street":"Jl Margonda Raya",
-            "city":"Depok",
-            "state":"West Java",
-            "zip": "16024"
+            "street":"Jl. brojolamatan",
+            "city":"Sleman",
+            "state":"Yogyakarta",
+            "zip": "55281"
         },
         "website": "https://github.com/ArviRizqi",
         "resumedownload":"https://github.com/ArviRizqi",
@@ -51,33 +51,33 @@
             {
                 "school": "Amikom University",
                 "degree": "Bachelor degree of Computer Science",
-                "graduated": "June 2021",
+                "graduated": "June 2021 - present",
                 "description" : "-"
             },
             {
                 "school": "SMK SAKTI GEMOLONG",
                 "degree": "Science",
                 "graduated": "May 2018",
-                "description": "I am joining computer olympiad"
+                "description": "Ketika menempuh pendidikan di SMK, saya berkesempatan mengikuti Lomba Kompetensi Siswa (LKS) pada bidang Web Development. Pada tahun 2020, saya mewakili sekolah di tingkat Kabupaten Sragen dan berhasil meraih juara 3. Meskipun sertifikatnya kini sudah tidak ada, pengalaman tersebut sangat berharga bagi saya."
             }
         ],
-        "work": [
+        "training": [
             {
-                "company" : "PT. Linimuda",
-                "title" : "Software Engineer",
-                "years": "April 2020 - February 2022",
-                "description": "Creating a website and maintenance"
+                "company" : "Build With Angga",
+                "title" : "SQL for Beginners: Learn SQL using MySQL and Database Design",
+                "years": "2023",
+                "description": ""
             }, {
-                "company": "My Skill Id",
-                "title": "Frontend Engineer",
-                "years": "February 2022 - present",
-                "description": "Creating a mobile application"
+                "company": "Cisco Networking Academy",
+                "title": "CCNAv7: Introduction to Networks",
+                "years": "2024",
+                "description": ""
             }
         ],
         "skills": [
             {
                 "name" : "C++",
-                "level": "50%"
+                "level": "30%"
             },
             {
                 "name": "Python",
@@ -85,15 +85,15 @@
             },
             {
                 "name": "ReactJS",
-                "level": "85%"
+                "level": "40%"
             },
             {
                 "name": "VueJS",
-                "level": "88%"
+                "level": "60%"
             },
             {
                 "name": "PHP",
-                "level": "60%"
+                "level": "40%"
             }
         ]
     },
