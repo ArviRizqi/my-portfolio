@@ -437,6 +437,7 @@ ul#nav li.current a { color: #fe6928; }
    background: #fff;
    overflow: hidden;
    position: relative;
+   cursor : pointer;
 
    -webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -494,6 +495,7 @@ ul#nav li.current a { color: #fe6928; }
 }
 .portfolio-item .item-wrap img {
    vertical-align: bottom;
+   cursor: pointer;
 }
 .portfolio-item .portfolio-item-meta { padding: 18px }
 .portfolio-item .portfolio-item-meta h5 {
