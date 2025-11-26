@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
 import { DownloadIcon } from "lucide-react";
+import RotatingText from "@/lib/animations/RotatingText";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -51,9 +52,24 @@ export default function AboutSection() {
           </p>
 
           <h2 className="text-4xl md:text-5xl font-extrabold notch-font text-slate-800 leading-tight">
-            Creating Clean and  
-            <span className="text-indigo-600"> User-Centered </span>
-            Frontend-Developer
+            Crafting <br />  
+            <span className="text-indigo-600"> 
+              <span className="text-indigo-600"> 
+              <RotatingText
+                texts={['Clean', "Modern", 'User-Centered']}
+                mainClassName=""
+                staggerFrom={"last"}
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "-120%" }}
+                staggerDuration={0.025}
+                splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                transition={{ type: "spring", damping: 30, stiffness: 200 }}
+                rotationInterval={3000}
+              />
+            </span>
+            </span>
+             Frontend Experiences
           </h2>
 
           <p className="text-slate-600 text-lg leading-relaxed max-w-lg font-medium headline-font">

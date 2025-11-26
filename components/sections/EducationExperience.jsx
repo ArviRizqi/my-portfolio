@@ -64,11 +64,13 @@ export default function Experience() {
                   gap-1
                   absolute 
                   w-[60%] md:w-[40%]
+                  h-[180px]
                   p-6 rounded-2xl shadow-lg 
                   bg-white border border-black/5
                   ${isLeft ? "left-15 top-10" : "right-15 -top-[25px]"}
                 `}
               >
+                <div className="hover:scale-102 transition-all duration-300 ease-out">
                 <p className="text-indigo-600 font-semibold">{item.year}</p>
                 <h3 className="text-slate-800 font-bold text-lg mt-1">
                   {item.title}
@@ -76,6 +78,7 @@ export default function Experience() {
                 <p className="text-slate-600 text-sm mt-2 leading-relaxed">
                   {item.desc}
                 </p>
+                </div>
               </Card>
 
               {/* TIMELINE NODE */}

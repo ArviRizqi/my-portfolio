@@ -10,6 +10,7 @@ import {
     MapPinIcon
 
 } from 'lucide-react';
+import { title } from 'process';
 
 export const navLinks = [
   { id: 1, icon: HomeIcon, href: '#home', title: 'Home' },
@@ -45,10 +46,11 @@ export const educations = [
 
 
 export const projects = [
-  { title: "J-Tech", tag: "Frontend Developer", img: "/j-tech.png", url:"https://j-tech.my.id/", class: "h-[220px] w-[40%]" },
-  { title: "Autisme Classification", tag: "Machine Learning Engineer", img: "/alter-chess.png", url:"https://autismeclassification.streamlit.app/", class: "h-[220px] w-[50%]" },
-  { title: "Mental Health Prediction", tag: "Machine Learning Engineer", img: "/j-tech.png", url:"https://huggingface.co/spaces/Artz-03/depression-prediction", class: "h-[220px] w-[50%]" },
-  { title: "Other Portolio", tag: "Fullstack Developer", img: "/alter-chess.png", url:"https://4693-arvirizqi-8zxg2a4uq-arvi-rizqis-projects.vercel.app/", class: "h-[220px]  w-[40%]" }
+  { title: "J-Tech", tag: "Frontend Developer", img: "/j-tech.png", url:"https://j-tech.my.id/", class: "h-[250px] w-[49%]" },
+  { title: "Autisme Classification", tag: "Machine Learning Engineer", img: "/autisme.png", url:"https://autismeclassification.streamlit.app/", class: "h-[250px] w-1/2" },
+  { title: "Other Portolio", tag: "Fullstack Developer", img: "/other.png", url:"https://4693-arvirizqi-8zxg2a4uq-arvi-rizqis-projects.vercel.app/", class: "h-[250px]  w-[38%]" },
+  { title: "Mental Health Prediction", tag: "Machine Learning Engineer", img: "/depresi.png", url:"https://huggingface.co/spaces/Artz-03/depression-prediction", class: "h-[250px] w-1/4" },
+  { title: "Oasis Pavilio", tag: "UI/UX Designer", img:"/oasis.png", url:"https://www.figma.com/design/ivkZgDfnpJsVLpbiBhoRpl/library?node-id=0-1&t=8xtMRrUb9vNapiYw-1", class: "h-[250px] w-[35%]"}
 ];
 
 export const address = [

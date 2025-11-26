@@ -46,32 +46,29 @@ export default function PortfolioSection() {
 
         {/* === NON-SYMMETRIC FLEX GALLERY === */}
         <div className="mt-10 flex flex-row gap-2 flex-wrap items-stretch content-start">
-
           {projects.map((p, index) => (
-  <Card
-    key={`${p.title}-${index}`} // <-- key unik
-    className={`project-card relative overflow-hidden bg-black p-2 ${p.class}`}
-  >
+          <Card
+            key={`${p.title}-${index}`} // <-- key unik
+            className={`project-card relative overflow-hidden p-0 ${p.class}`}
+          >
 
-    <img
-      src={p.img}
-      alt={p.title}
-      className="w-full h-full object-cover transition-all duration-500 scale-100 group-hover:scale-110"
-    />
+            <img
+              src={p.img}
+              alt={p.title}
+              className="w-full h-full object-cover transition-all duration-500 rounded-xl"
+            />
 
-    {/* HOVER OVERLAY */}
-    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 hover:opacity-100 transition-all duration-300 flex items-end p-4">
-      <div>
-        <p className="text-[11px] uppercase tracking-[0.16em] text-gray-300">
-          {p.tag}
-        </p>
-        <a href={p.url} target="_blank" className="text-white font-semibold text-base mt-1">{p.title}</a>
-      </div>
-    </div>
-  </Card>
-))}
-
-
+            {/* HOVER OVERLAY */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 hover:opacity-100 transition-all duration-300 flex items-end p-4">
+              <div>
+                <p className="text-[11px] uppercase tracking-[0.16em] text-gray-300">
+                  {p.tag}
+                </p>
+                <a href={p.url} target="_blank" className="text-white font-semibold text-base mt-1">{p.title}</a>
+              </div>
+            </div>
+          </Card>
+        ))}
         </div>
       </div>
     </section>
