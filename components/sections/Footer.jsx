@@ -5,7 +5,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
         <div className="flex items-center gap-2">
           <div className="w-36">
-            <img src="/light-logo.png" alt="logo" />
+            <img src="/icon-logo.png" alt="logo" />
           </div>
         </div>
         <p className="text-[15px]">Copyright © {year} Indonesia. All rights reserved.</p>
