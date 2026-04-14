@@ -36,7 +36,7 @@ export default function Navbar() {
                 asChild
                 variant="ghost"
                 size="icon"
-                className="text-xl font-bold text-slate-400 hover:text-indigo-500 transition-colors duration-200 h-8 w-8"
+                className="text-xl font-bold text-slate-500 hover:text-cyan-400 transition-colors duration-200 h-8 w-8"
                 
               >
                 <a href={link.href} title={link.title}>

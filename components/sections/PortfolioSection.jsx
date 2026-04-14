@@ -1,30 +1,24 @@
 "use client";
+
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Card } from "@/components/ui/card";
-import { projects } from "@/lib/data";
+import { ExternalLinkIcon } from "lucide-react";
+import { otherProjects } from "@/lib/data";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
-
-export default function PortfolioSection() {
+export default function OtherProjects() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const el = sectionRef.current;
     const ctx = gsap.context(() => {
-      gsap.from(el.querySelectorAll(".project-card"), {
-        scrollTrigger: {
-          trigger: el,
-          start: "top 80%",
-        },
-        y: 40,
-        opacity: 0,
-        duration: 0.9,
-        stagger: 0.15,
-        ease: "power3.out",
+      document.querySelectorAll(".other-card").forEach((card) => {
+        gsap.fromTo(card,
+          { y: 20 },
+          { y: 0, duration: 0.7, ease: "power3.out",
+            scrollTrigger: { trigger: card, start: "top 90%", toggleActions: "play none none none" } }
+        );
       });
     }, sectionRef);
     return () => ctx.revert();
@@ -32,43 +26,55 @@ export default function PortfolioSection() {
 
   return (
     <section
-      id="portfolio"
+      id="other-projects"
       ref={sectionRef}
-      className="pt-20 pb-[420px] bg-gradient-to-b from-[#f8fafc] via-[#f1f5f9] to-[#eef2f6] border-t border-indigo-900/20"
+      className="py-20 relative"
+      style={{ background: "linear-gradient(to bottom, #060b14, #060b14)" }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-4xl font-bold text-indigo-900 notch-font">Portfolio</h2>
-          <p className="text-slate-600 mt-3 text-base md:text-lg headline-font">
-            A selection of dashboards, landing pages, and digital product work.
+
+        {/* Header */}
+        <div className="mb-10">
+          <p className="text-slate-500 font-semibold tracking-widest uppercase text-xs headline-font mb-2">
+            Supporting Skills
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-white notch-font">
+            Frontend & Design Work
+          </h2>
+          <p className="text-slate-500 mt-2 text-sm headline-font max-w-lg">
+            Frontend and design projects that demonstrate my ability to build the full product — not just the model.
           </p>
         </div>
 
-        {/* === NON-SYMMETRIC FLEX GALLERY === */}
-        <div className="mt-10 flex flex-row gap-2 flex-wrap items-stretch content-start">
-          {projects.map((p, index) => (
-          <Card
-            key={`${p.title}-${index}`} // <-- key unik
-            className={`project-card relative overflow-hidden p-0 ${p.class}`}
-          >
-
-            <img
-              src={p.img}
-              alt={p.title}
-              className="w-full h-full object-cover transition-all duration-500 rounded-xl"
-            />
-
-            {/* HOVER OVERLAY */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 hover:opacity-100 transition-all duration-300 flex items-end p-4">
-              <div>
-                <p className="text-[11px] uppercase tracking-[0.16em] text-gray-300">
-                  {p.tag}
-                </p>
-                <a href={p.url} target="_blank" className="text-white font-semibold text-base mt-1">{p.title}</a>
+        {/* Compact card grid */}
+        <div className="flex flex-wrap gap-3">
+          {otherProjects.map((p, i) => (
+            <a
+              key={i}
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`other-card relative overflow-hidden rounded-xl group cursor-pointer ${p.class}`}
+            >
+              <img
+                src={p.img}
+                alt={p.title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-70 group-hover:opacity-90"
+              />
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-4">
+                <div>
+                  <p className="text-[10px] uppercase tracking-widest text-slate-400 headline-font">
+                    {p.tag}
+                  </p>
+                  <p className="text-white font-semibold text-sm mt-0.5 flex items-center gap-1 notch-font">
+                    {p.title}
+                    <ExternalLinkIcon size={11} className="opacity-60 group-hover:opacity-100 transition-opacity" />
+                  </p>
+                </div>
               </div>
-            </div>
-          </Card>
-        ))}
+            </a>
+          ))}
         </div>
       </div>
     </section>

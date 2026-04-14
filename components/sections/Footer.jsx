@@ -1,14 +1,21 @@
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="pt-50 pb-15 bg-gradient-to-t from-[#0a0f1f] via-[#0d1228] to-[#0b1120]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-        <div className="flex items-center gap-2">
-          <div className="w-36">
-            <img src="/icon-logo.png" alt="logo" />
+    <footer
+      className="py-10 border-t border-white/5"
+      style={{ background: "#060b14" }}
+    >
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <img src="/icon-logo.png" alt="Arvi Rizqi Fadhila" className="w-8 h-8 opacity-70" />
+          <div>
+            <p className="text-white font-bold text-sm notch-font">Arvi Rizqi Fadhila</p>
+            <p className="text-slate-500 text-xs headline-font">Data Analyst · ML Engineer</p>
           </div>
         </div>
-        <p className="text-[15px]">Copyright © {year} Indonesia. All rights reserved.</p>
+        <p className="text-slate-600 text-xs headline-font">
+          © {year} Arvi Rizqi Fadhila. Built with Next.js & GSAP.
+        </p>
       </div>
     </footer>
   );

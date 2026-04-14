@@ -37,7 +37,7 @@ export default function NavbarSosmed() {
                   asChild
                   variant="ghost"
                   size="icon"
-                  className="text-xl font-bold text-slate-400 hover:text-indigo-500 transition-colors duration-200 h-8 w-8"
+                  className="text-xl font-bold text-slate-500 hover:text-cyan-400 transition-colors duration-200 h-8 w-8"
                 >
                   <a 
                     href={link.href}
@@ -54,7 +54,7 @@ export default function NavbarSosmed() {
         </ul>
 
         {/* Vertical line */}
-        <div className="w-0.5 h-16 bg-slate-500" />
+        <div className="w-0.5 h-16 bg-gradient-to-b from-cyan-500/40 to-transparent" />
       </div>
     </aside>
   );

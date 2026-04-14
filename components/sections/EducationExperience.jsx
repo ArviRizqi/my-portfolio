@@ -1,6 +1,5 @@
 "use client";
 
-import { Card } from "@/components/ui/card";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -12,87 +11,81 @@ export default function Experience() {
   const ref = useRef(null);
 
   useEffect(() => {
-    gsap.from(".timeline-card", {
-      scrollTrigger: {
-        trigger: ref.current,
-        start: "top 85%",
-      },
-      opacity: 0,
-      y: 40,
-      duration: 1,
-      stagger: 0.2,
-      ease: "power3.out",
-    });
+    const ctx = gsap.context(() => {
+      document.querySelectorAll(".timeline-item").forEach((el) => {
+        gsap.fromTo(el,
+          { x: -20 },
+          { x: 0, duration: 0.7, ease: "power3.out",
+            scrollTrigger: { trigger: el, start: "top 90%", toggleActions: "play none none none" } }
+        );
+      });
+    }, ref);
+    return () => ctx.revert();
   }, []);
 
   return (
     <section
       id="experience"
       ref={ref}
-      className="py-28 bg-gradient-to-t from-[#f8fafc] via-[#f1f5f9] to-[#eef2f6] border-t border-indigo-900/20"
-      >
+      className="py-24 relative"
+      style={{ background: "linear-gradient(to bottom, #060b14, #080e1c)" }}
+    >
+      <hr className="section-divider mb-20" />
+      <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
+        {/* Header */}
+        <div className="mb-14">
+          <p className="text-cyan-400 font-semibold tracking-widest uppercase text-xs headline-font mb-3">
+            Background
+          </p>
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white notch-font">
+            Education & Credentials
+          </h2>
+          <p className="text-slate-400 mt-3 text-base headline-font max-w-xl">
+            Academic foundation and professional training that shaped my data & ML expertise.
+          </p>
+        </div>
 
+        {/* Timeline */}
+        <div className="relative">
+          {/* Vertical line */}
+          <div className="absolute left-5 top-0 bottom-0 w-px timeline-line" />
 
-      {/* bg-gradient-to-b from-[#0B0F19] via-[#111827] to-[#0B0F19] */}
-      <div className="max-w-6xl mx-auto px-6 lg:px-10 text-center">
-        <h2 className="text-4xl font-bold text-indigo-900 notch-font">
-          Education & Experience Roadmap
-        </h2>
-        <p className="text-slate-600 mt-3 text-base md:text-lg headline-font">
-          Perjalanan profesional yang membentuk kompetensi saya.
-        </p>
-      </div>
-
-      {/* TIMELINE WRAPPER */}
-      <div className="relative max-w-5xl mx-auto mt-20">
-
-        {/* LOOP TIMELINE */}
-        {educations.map((item, index) => {
-          const isLeft = index % 2 === 0;
-
-          return (
-            <div key={index} className="relative min-h-[200px]">
-
-              {/* LINE */}
-              <div className="absolute left-1/2 top-0 h-full w-[3px] bg-indigo-300/30 -translate-x-1/2" />
-
-              {/* CARD */}
-              <Card
-                className={`
-                  timeline-card
-                  gap-1
-                  absolute 
-                  w-[60%] md:w-[40%]
-                  h-[180px]
-                  p-6 rounded-2xl shadow-lg 
-                  bg-white border border-black/5
-                  ${isLeft ? "left-15 top-10" : "right-15 -top-[25px]"}
-                `}
-              >
-                <div className="hover:scale-102 transition-all duration-300 ease-out">
-                <p className="text-indigo-600 font-semibold">{item.year}</p>
-                <h3 className="text-slate-800 font-bold text-lg mt-1">
-                  {item.title}
-                </h3>
-                <p className="text-slate-600 text-sm mt-2 leading-relaxed">
-                  {item.desc}
-                </p>
+          <div className="space-y-8">
+            {educations.map((item, index) => (
+              <div key={index} className="timeline-item relative flex gap-8">
+                {/* Node */}
+                <div className="relative z-10 flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#080e1c] border-2 border-cyan-500/40 flex items-center justify-center text-xs font-bold text-cyan-400 notch-font">
+                    {educations.length - index}
+                  </div>
                 </div>
-              </Card>
 
-              {/* TIMELINE NODE */}
-              <div
-                className={`
-                  absolute left-1/2 w-4 h-4 rounded-full 
-                  bg-white border-4 border-indigo-400 shadow
-                  -translate-x-1/2
-                  ${isLeft ? "top-[120px]" : "top-[60px]"}
-                `}
-              />
-            </div>
-          );
-        })}
+                {/* Card */}
+                <div className="glass-card rounded-2xl p-6 flex-1 hover:-translate-y-0.5 transition-all duration-300">
+                  <div className="flex flex-wrap items-start justify-between gap-3">
+                    <div className="flex-1">
+                      <h3 className="text-white font-bold text-base md:text-lg notch-font">
+                        {item.title}
+                      </h3>
+                      <p className="text-slate-400 text-sm mt-2 leading-relaxed headline-font">
+                        {item.desc}
+                      </p>
+                      <div className="mt-3">
+                        <span className="text-xs px-3 py-1 rounded-full badge-cyan headline-font">
+                          {item.tag}
+                        </span>
+                      </div>
+                    </div>
+                    <span className="text-cyan-400 font-semibold text-sm notch-font shrink-0 mt-1">
+                      {item.year}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
