@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Arvi Rizqi Fadhila — Data Analyst &amp; ML Engineer</title>
+        <title>Arvi Rizqi Fadhila — Data Scientist &amp; ML Engineer</title>
       </head>
       <body className="antialiased">{children}</body>
     </html>
