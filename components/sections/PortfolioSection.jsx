@@ -28,10 +28,11 @@ export default function OtherProjects() {
     <section
       id="other-projects"
       ref={sectionRef}
-      className="py-20 relative"
+      className="pt-18 pb-28 relative"
       style={{ background: "linear-gradient(to bottom, #060b14, #060b14)" }}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <hr className="section-divider"/>
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 mt-10">
 
         {/* Header */}
         <div className="mb-10">

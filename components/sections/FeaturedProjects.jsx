@@ -28,10 +28,10 @@ export default function FeaturedProjects() {
     <section
       id="projects"
       ref={sectionRef}
-      className="py-28 relative"
+      className="pt-28 pb-8 relative border-t border-slate-700/50"
       style={{ background: "linear-gradient(to bottom, #060b14, #07101e, #060b14)" }}
     >
-      <hr className="section-divider mb-20" />
+
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
         {/* Header */}
@@ -147,6 +147,9 @@ export default function FeaturedProjects() {
                       <GithubIcon size={14} /> GitHub
                     </a>
                   </div>
+                  <p className="text-start text-slate-400 text-xs mt-10 headline-font">
+                    ⚡ If the web server (Streamlit) breaks, simply run it again to restart.
+                  </p>
                 </div>
 
                 {/* === RIGHT: Image + metrics (2/5) === */}
@@ -168,8 +171,8 @@ export default function FeaturedProjects() {
                         key={m.label}
                         className="glass-card px-3 py-2 rounded-lg text-right"
                       >
-                        <p className="text-[10px] text-slate-500 headline-font">{m.label}</p>
-                        <p className="text-sm font-bold text-white notch-font">{m.value}</p>
+                        <p className="text-[10px] text-slate-200 headline-font">{m.label}</p>
+                        <p className="text-sm font-bold text-cyan-400 notch-font">{m.value}</p>
                       </div>
                     ))}
                   </div>

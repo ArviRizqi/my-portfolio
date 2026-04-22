@@ -128,7 +128,7 @@ export default function Hero() {
           {[
             { value: "3", label: "ML Projects Built" },
             { value: "2", label: "Live Deployments" },
-            { value: "~92%", label: "CNN+ViT Accuracy" },
+            { value: "~90%", label: "MobileViTv2 Accuracy" },
           ].map((stat) => (
             <div key={stat.label} className="text-start">
               <p className="text-2xl font-bold text-cyan-400 notch-font">{stat.value}</p>

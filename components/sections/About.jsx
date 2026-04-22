@@ -12,8 +12,8 @@ gsap.registerPlugin(ScrollTrigger);
 const metrics = [
   { value: "3", label: "ML Projects Built", icon: "🤖" },
   { value: "2", label: "Live Deployments",   icon: "🚀" },
-  { value: "~92%", label: "CNN+ViT Accuracy", icon: "🎯" },
-  { value: "2024",  label: "Fresh Graduate",   icon: "🎓" },
+  { value: "~90%", label: "MobileViTv2 Accuracy", icon: "🎯" },
+  { value: "2026",  label: "Fresh Graduate",   icon: "🎓" },
 ];
 
 export default function AboutSection() {
@@ -44,10 +44,9 @@ export default function AboutSection() {
     <section
       id="about"
       ref={aboutRef}
-      className="py-28 relative"
+      className="py-28 relative border-t border-slate-700/50"
       style={{ background: "linear-gradient(to bottom, #060b14, #080e1c, #060b14)" }}
     >
-      <hr className="section-divider mb-20" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
 
@@ -59,7 +58,7 @@ export default function AboutSection() {
 
           <h2 className="text-4xl md:text-5xl font-extrabold notch-font text-white leading-tight">
             Building{" "}
-            <span className="gradient-text-cyan">
+            <span className="text-cyan-600">
               <RotatingText
                 texts={["Predictive", "Data-Driven", "End-to-End"]}
                 mainClassName=""
@@ -73,7 +72,6 @@ export default function AboutSection() {
                 rotationInterval={2800}
               />
             </span>
-            <br />
             Data Products
           </h2>
 
@@ -132,7 +130,7 @@ export default function AboutSection() {
             />
             {/* Floating credential badge */}
             <div className="absolute -bottom-4 -right-4 z-20 glass-card px-4 py-3 rounded-xl float">
-              <p className="text-xs text-slate-400 headline-font">Currently open to</p>
+              <p className="text-xs text-slate-800 headline-font">Currently open to</p>
               <p className="text-sm font-bold text-cyan-400 notch-font">Data / ML Roles 🎯</p>
             </div>
           </div>

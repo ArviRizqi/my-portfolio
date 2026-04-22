@@ -27,10 +27,10 @@ export default function Experience() {
     <section
       id="experience"
       ref={ref}
-      className="py-24 relative"
+      className="py-24 relative border-t border-slate-700/50"
       style={{ background: "linear-gradient(to bottom, #060b14, #080e1c)" }}
     >
-      <hr className="section-divider mb-20" />
+
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
         {/* Header */}

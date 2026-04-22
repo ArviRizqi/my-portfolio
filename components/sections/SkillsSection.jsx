@@ -66,10 +66,10 @@ export default function SkillsSection() {
     <section
       id="skills"
       ref={sectionRef}
-      className="py-28 relative"
+      className="py-28 relative border-t border-slate-700/50"
       style={{ background: "linear-gradient(to bottom, #060b14, #080e1c, #060b14)" }}
     >
-      <hr className="section-divider mb-20" />
+
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
         {/* Header */}
