@@ -10,11 +10,11 @@ export default function Footer() {
           <img src="/icon-logo.png" alt="Arvi Rizqi Fadhila" className="w-8 h-8 opacity-70" />
           <div>
             <p className="text-white font-bold text-sm notch-font">Arvi Rizqi Fadhila</p>
-            <p className="text-slate-500 text-xs headline-font">Data Analyst · ML Engineer</p>
+            <p className="text-slate-500 text-xs headline-font">Data Scientist · ML Engineer</p>
           </div>
         </div>
         <p className="text-slate-600 text-xs headline-font">
-          © {year} Arvi Rizqi Fadhila. Built with Next.js & GSAP.
+          © {year} | Arvi Rizqi Fadhila.
         </p>
       </div>
     </footer>

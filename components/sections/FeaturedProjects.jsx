@@ -147,7 +147,7 @@ export default function FeaturedProjects() {
                       <GithubIcon size={14} /> GitHub
                     </a>
                   </div>
-                  <p className="text-start text-slate-400 text-xs mt-10 headline-font">
+                  <p className="text-start text-slate-400 text-[0.8rem] mt-10 headline-font">
                     ⚡ If the web server (Streamlit) breaks, simply run it again to restart.
                   </p>
                 </div>

@@ -73,7 +73,7 @@ export default function Hero() {
 
         {/* Role badges */}
         <div ref={badgesRef} className="flex flex-wrap gap-2 mb-6">
-          {["Data Analyst", "ML Engineer", "End-to-End Builder"].map((badge) => (
+          {["Data Scientist", "ML Engineer", "End-to-End Builder"].map((badge) => (
             <span
               key={badge}
               className="text-xs font-semibold px-3 py-1.5 rounded-full badge-cyan headline-font tracking-wide"
