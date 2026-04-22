@@ -140,7 +140,7 @@ export const featuredProjects: FeaturedProject[] = [
 
 export const otherProjects = [
   { title: "J-Tech Company Site", tag: "Frontend · React · Next.js", img: "/j-tech.png", url: "https://j-tech.my.id/", class: "h-[220px] w-[49%]" },
-  { title: "Oasis Pavilion — UI/UX", tag: "Figma · Design System", img: "/oasis.png", url: "https://www.figma.com/design/ivkZgDfnpJsVLpbiBhoRpl/library?node-id=0-1&t=8xtMRrUb9vNapiYw-1", class: "h-[220px] w-1/2" },
+  { title: "Oasis Pavilion — UI/UX", tag: "Design · Figma · Design System", img: "/oasis.png", url: "https://www.figma.com/design/ivkZgDfnpJsVLpbiBhoRpl/library?node-id=0-1&t=8xtMRrUb9vNapiYw-1", class: "h-[220px] w-1/2" },
   { title: "ALter-Chess", tag: "Game Development · C++ · Unity", img: "/alter-chess.png", url: "https://alterchess.my.id/", class: "h-[220px] w-[49%]" },
 
 ];
